@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+input {
+    display:none;
+}
+label {
+  display:block;
+  padding:12px;
+}
+
+label::after {
+  content:"+";
+  float:right;
+}
+
+input:checked + label::after {
+  content:"-";
+}
+
+.content {
+  max-height:0;
+  overflow:hidden;
+  padding:0 12px;
+}
+input:checked ~ .content {
+  max-height:100px;
+  padding:10px 12px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="acc">
+
+  <div>
+    <input type="checkbox" id="a1">
+    <label for="a1">section 1</label>
+    <div class="content">HELLO</div>
+  </div>
+  <div>
+    <input type="checkbox" id="a2">
+    <label for="a2">section 2</label>
+    <div class="content">HOLA</div>
+  </div>
+  <div>
+    <input type="checkbox" id="a3">
+    <label for="a3">section 3</label>
+    <div class="content">BONJOUR</div>
+  </div>
+
+</div>
+</body>
+</html>
