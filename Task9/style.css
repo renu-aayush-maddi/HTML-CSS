@@ -1,0 +1,70 @@
+.header{
+  background:#222;
+  color:#fff;
+  text-align:center;
+  position:sticky;
+  top:0;
+  padding:15px;
+  z-index:1000;
+}
+
+.container{
+  display:grid;
+  grid-template-areas:
+    "sidebar main";
+  min-height:100vh;
+}
+
+.sidebar{
+  background:#333;
+  color:#fff;
+  padding:20px;
+  position:sticky;
+  top:60px;
+  height: 20px;
+}
+
+.main{
+  grid-area:main;
+  padding:20px;
+  display:flex;
+  flex-direction:column;
+  gap:20px;
+}
+
+.card{
+  background:#d65a5a;
+  padding:20px;
+  display:flex;
+  align-items:center;
+  position:relative;
+}
+
+.badge{
+  background:rgb(8, 25, 215);
+  color:#fff;
+  top:-10px;
+  right:-10px;
+  position:absolute;
+}
+
+.flex-row{
+  display:flex;
+  gap:10px;
+}
+
+.box{
+  background:#ddd;
+  text-align:center;
+  flex:1;
+  padding:20px;
+}
+
+@media(max-width:700px){
+  .container{
+    grid-template-columns:1fr;
+    grid-template-areas:
+      "main"
+      "sidebar";
+  }
+}
